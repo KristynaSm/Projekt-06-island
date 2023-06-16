@@ -105,15 +105,11 @@
 
 
 .menu {
-    display: flex;
-    position: relative;
     font-weight: 400;
     text-align: center;
-    padding-left: 2.1rem;
-    padding-right: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
     padding: 30px;
+    margin-bottom: 2rem;
+    justify-content: center;
 }
 
 .menu a:hover {
@@ -121,8 +117,6 @@
 }
 
 .obal {
-    margin-top: 2rem;
-    display: flex;
     justify-content: space-between;
 }
 
@@ -132,39 +126,33 @@ img {
 
 .polozky {
     display: block;
+    text-align: center;
     border:none;
 }
 
 .polozka {
     list-style:none;
-    text-align: left;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     border-bottom: 1px solid rgb(201, 201, 201);
-
 }
 
 a {
-    text-decoration: none;
     text-transform: uppercase;
-    color:rgb(201,201,201,);
     display: inline-block;
+    text-decoration:none;
+    color: #d3d2d2;
 }
 
 .lu {
     list-style-type: none;
   }
 
- li a:hover {
+ li a:hover {/files/U04UX9B2SR4/F05CL9FJ4BY/index.html
     color:black;
     font-weight: bold;
 
- }
-
- a {
-    text-decoration:none;
-    color: #d3d2d2;
-        
  }
 
  .uvod {
@@ -230,15 +218,17 @@ a {
 
 .popisek {
     text-align: center;
-    color: white;
+    color: rgb(132, 124, 124);
     font-family: Raleway, sans-serif;
     font-size:11px;
     font-weight: 700;
     margin: 0;
+    padding-top: 5px;
  }
 
  .popisek a {
-    color:white;
+    color:rgb(132, 124, 124);
+    text-decoration: underline;
     font-size:11px;
  }
 
@@ -293,7 +283,7 @@ a {
 
 /* verze pro tablet*/
 
-@media screen and (min-width: 540px) and (max-width:1000px) {
+@media screen and (min-width: 500px) and (max-width:1000px) {
 
     .menu {
         display:flex;
@@ -313,13 +303,13 @@ a {
 
     .foto img {
         transition: transform 0.6s;
+        transform: translateY(15px);
+        display: block;
     }
      
     li  {
-        display: flex;
         text-align: center;    
         justify-content: space-around;
-        width: 20%;
         border-top: 0.8px rgba(116, 116, 116, 0.1) solid;
         padding: 0.5rem;
     }
@@ -348,11 +338,6 @@ a {
         transition: opacity 0.3s ease;
     }
 
-    .foto img {
-        display: block;
-        transition: transform 500s ease 0s;
-    }
-
     .mistecko {
         font-weight: bold;
     }
@@ -368,11 +353,14 @@ a {
 
  }
 
- .menu {
+ .polozky {
     display: flex;
+ }
+
+ .menu {
+    display: inline-block;
     color:grey;
     flex-direction: row;
-    align-items: flex-start;
     width: 100%;
     padding-left: 1.4rem;
     padding-right: 1.4rem;
@@ -380,11 +368,14 @@ a {
  }
 
  .li {
-    display: flex;
+    flex: 1 1 25%;
     text-align: center;
-    width: 20%;
 
  }
+
+ .podnazev {
+    padding-left: 1rem;
+}
 
  .zahlavi {
     min-height: 340px;
@@ -413,11 +404,6 @@ a {
     color: white;
  }
 
- .popisek-copy {
-    font-size: 0.7rem;
-    color: white;
- }
-
  .foto {
     width: 50%;
     position: relative;
@@ -429,8 +415,8 @@ a {
  }
 
  .foto:hover img {
-    transition-duration: 0.6s;
-    transform: scale(1.27);
+    transform: scale(1.50);
+    transition: transform 1.5s;
  }
 
  .foto p {
@@ -442,24 +428,28 @@ a {
     padding-bottom: 0.7rem;
     background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     transform: translateY(-50%);
-    transition: transform 0.9s ease-in-out;
+    transition: transform 0.9s;
  }
 
-  .popisek {
-    position: absolute;
-    width: 100%;
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-    transform: translate(-50%, -50%);
-    text-align: center;
-    transition: opacity 0.3s ease;
-}
+ .popisek-copy {
+    text-align: right;
+    padding: 5px;
+    color: white;
+    font-size: 0.7rem;
+ }
+
+
+ .popisek a {
+    color:white;
+ }
 
  .popisek {
     text-align: center;
+ }
+
+.fig p {
+    text-align: right;
     font-family: Raleway, sans-serif;
-    font-size: 0.8rem;
     font-weight: 400;
     margin-top: 0;
     color: white;
@@ -469,14 +459,6 @@ a {
     left: 0;
     right: 0;
 }
-
- .popisek a {
-    color:white;
- }
-
- .popisek {
-    text-align: center;
- }
  
  .mistecko {
     font-weight: bold;
@@ -517,9 +499,12 @@ a {
     }
 
     .polozky {
-        justify-content: flex-start;
         width: 100%;
         padding: 0.5rem;
+    }
+
+    .polozka {
+        text-align: left;
     }
 
     .obal {
@@ -606,12 +591,12 @@ a {
 
     .popisek, .popisek-copy {
         text-align: right;
-        padding:5px;
+        padding: 5px;
     }
 
     .popisek p {
         padding-top:1rem;
-        padding-bottom:1rem;
+        padding-bottom:2rem;
         transition-duration: 0.6s;
         transform: scale(1.27);
     }
@@ -623,14 +608,18 @@ a {
         bottom: 0;
         margin:0;
         padding-top: 0.7rem;
-        padding-bottom: 0.7rem;
+        padding-bottom: 0.8rem;
         background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-        transform: translateY(-50%);
-        transition: transform 0.9s ease-in-out;
+        transform: translateY(-70%);
+        transition: transform 0.8s;
+     }
+
+     .foto span {
+      
      }
 
      .foto:hover img {
         transform: scale(1.50);
-        transition: transform 1.2s;
+        transition: transform 1.5s;
      }
  }
