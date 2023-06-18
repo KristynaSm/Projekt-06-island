@@ -295,6 +295,7 @@ a {
     }
 
     .polozka {
+        flex: 1 1 25%;
         list-style:none;
         text-align: center;
         padding-top: 0.5rem;
@@ -366,6 +367,7 @@ a {
  }
 
  .polozka {
+    flex: 1 1 25%;
     list-style:none;
     text-align: center;
     padding-top: 0.5rem;
