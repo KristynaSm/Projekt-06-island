@@ -314,9 +314,17 @@ a {
     }
 
     .foto img {
-        transition: transform 0.6s;
+        transition: transform 0.9s;
         transform: translateY(15px);
         display: block;
+    }
+
+    .foto:hover img {
+        transform: scale(1.15);
+    }
+
+    .foto:hover .popisek {
+        transform: translateY(0);
     }
      
     li  {
@@ -420,27 +428,31 @@ a {
  }
 
  .foto img {
-    display: block;
- }
+	display: block;
+	width: 100%;
+	height: auto;
+}
 
  .foto:hover img {
     transform: scale(1.50);
-    transition: transform 1.5s;
-
  }
 
- .foto p {
+ .foto:hover .popisek {
+    transform: translateY(0);
+ }
+
+ .foto .popisek {
     position: absolute;
     width: 100%;
     bottom: 0;
-    margin:0;
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-    transform: translateY(-50%);
-    transition: transform 0.9s;
-
- }
+    margin: 0;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 16px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
 
  .popisek-copy {
     text-align: right;
@@ -601,7 +613,6 @@ a {
      line-height: 0;
      overflow: hidden;
      position: relative;
-     transition:transform 1s ease-in;
   }
 
    .texty {
@@ -617,22 +628,31 @@ a {
     .popisek p {
         padding-top:1rem;
         padding-bottom:2rem;
-        transition-duration: 0.6s;
-        transform: scale(1.27);
     }
 
     .foto p {
         position: absolute;
-        text-align: center;
         width: 100%;
         bottom: 0;
-        margin:0;
-        padding-top: 0.7rem;
-        padding-bottom: 0.8rem;
+        margin: 0;
+        padding: 10px 15px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 16px;
         background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-        transform: translateY(-70%);
-        transition: transform 0.8s;
+        transform: translateY(150%);
+        transition: transform 0.7s ease-in-out;
      }
+
+     .foto .popisek {
+        margin: 10px 0 20px 0;
+        color: #888;
+        font-family: 'Raleway', sans-serif;
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-align: center;
+    }
 
      .foto span {
       text-align: right;
@@ -643,4 +663,17 @@ a {
         transform: scale(1.50);
         transition: transform 1.5s;
      }
+
+     .foto:hover .popisek {
+        transform: translateY(0);
+    }
+
+     .paticka {
+        max-width: 960px;
+        margin: 30px auto;
+        font-size: 14px;
+    }
+
  }
+
+
